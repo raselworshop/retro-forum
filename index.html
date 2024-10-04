@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>retro Forum</title>
+    <!-- cdn for font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- mulish google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,10 +113,10 @@
                 <p class="text-lg font-mulish font-normal text-center">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
             </div>
             <!-- cards left -->
-            <div class="grid grid-cols-3 justify-between gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 justify-between gap-5">
                 <!--left-side posting-crads -->
                 <div class="col-span-2 flex justify-center gap-5 bg-slate-200 p-8 rounded-3xl">
-                    <div class="h-20 w-20 rounded-3xl bg-slate-600">
+                    <div class="h-10 md:h-20 w-20 rounded-3xl bg-slate-600">
                         <img src="" alt="">
                     </div>
                     <div class="p-2">
@@ -163,7 +165,7 @@
                     </div>
                 </div>
                 <!-- read cards right -->
-                <div class="bg-base-300 rounded-3xl p-8">
+                <div class="bg-base-300 rounded-3xl p-8 m-2 md:m-0">
                     <div class="flex justify-between mb-8">
                         <h1 class="font-bold font-mulish">Title</h1>
                         <div class="flex justify-between">
@@ -192,7 +194,74 @@
             </div>
         </section>
         <!-- join our forum section -->
+        <section class="max-w-screen-sm md:max-w-6xl mx-auto my-12 bg-slate-900 rounded-3xl">
+            <div class="p-16 grid md:grid-cols-3 grid-cols-1 justify-center items-center mx-auto">
+                <div class="col-span-2">
+                    <h1 class="font-mulish font-bold text-3xl md:text-5xl text-white mb-5">Join Our Forum</h1>
+                    <p class="font-mulish font-medium text-lg text-slate-600 mb-5">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+                    <button class="px-5 md:px-8 py-1 md:py-4 bg-blue-500 text-white rounded-full">Register Now</button>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <img src="./images/joinforum.png" alt="join-forum section photo">
+                </div>
+            </div>
+        </section>
+        <!-- latest posts section -->
+        <section class="max-w-screen-sm md:max-w-6xl mx-auto my-12">
+            <!-- header text div  -->
+            <div class="flex flex-col justify-between items-center gap-5 mb-12">
+                <h1 class="font-mulish font-bold text-3xl md:text-5xl">Latest Posts</h1>
+                <p class="text-center font-mulish text-slate-500 text-lg">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            </div>
+            <!--LPost cards -->
+            <div class="grid md:grid-cols-3 grid-cols-1 justify-between">
+                <div class="p-5 border flex flex-col justify-center items-center gap-5 rounded-2xl">
+                    <div class="h-40 w-52 bg-slate-600 mb-5 rounded-2xl">
+                        <img class="w-full" src="" alt="">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+                                </svg>                                  
+                            </div>
+                            <time datetime="dd/mm/yyyy">29 January, 2024</time>
+                        </div>
+                        <div>
+                            <h2 class="font-mulish font-extrabold text-lg">What will a mars habitat force that impact in our daily life!!!</h2>
+                            <p class="font-mulish font-normal">Yes, you can run unit tests and view the results directly within the app. </p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="h-10 w-10 bg-slate-700 rounded-full">
+                                <img class="w-full" src="" alt="">
+                            </div>
+                            <div>
+                                <h3 class="font-mulish font-bold">Cameron Williamson</h3>
+                                <p class="font-mulish text-sm">ROR Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="bg-base-300 p-12">
+        <section class="flex flex-col justify-center items-center gap-8">
+            <img src="./images/logo.png" alt="">
+            <p class="text-center font-mulish text-slate-500">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC</p>
+            <div class="flex justify-between items-center gap-5">
+                <!-- twitter -->
+                <i class="fa-brands fa-twitter"></i>
+                <!-- facebook -->
+                <i class="fa-brands fa-facebook"></i>
+                <!-- Insta -->
+                <i class="fa-brands fa-instagram"></i>
+                <!-- git -->
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <p>&copy;<span>2017, All Rights Reserved.</span></p>
+        </section>
+    </footer>
 </body>
 </html>

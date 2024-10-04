@@ -2,7 +2,14 @@
 module.exports = {
   content: ['*'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'mulish': ["Mulish" ,'sans-serif']
+    },
+      backgroundImage: {
+        'hero-bg-img': "url('./images/bgbanner.png')",
+      },
+    },
   },
   plugins: [
     require('daisyui')

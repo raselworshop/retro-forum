@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>retro Forum</title>
+    <!-- mulish google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <!-- daisyUI cdn for git live link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -13,6 +17,12 @@
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+                'mulish': ["Mulish" ,'sans-serif']
+            },
+            backgroundImage: {
+                    'hero-bg-img': "url('./images/bgbanner.png')",
+              },
             colors: {
               clifford: '#da373d',
             }
@@ -20,10 +30,15 @@
         }
       }
     </script>
+    <style>
+        input::placeholder{
+            text-align: left;
+        }
+    </style>
 </head>
-<body>
+<body class="font-mulish">
     <header>
-        <nav class="max-w-screen-sm md:max-w-6xl mx-auto flex justify-between mt-4">
+        <nav class="max-w-screen-sm md:max-w-6xl mx-auto flex justify-between my-8">
             <div>
                 <img src="./images/logo.png" alt="retro-logo">
             </div>
@@ -56,7 +71,39 @@
             </div>              
         </nav>
     </header>
-    <main></main>
+    <main>
+        <!-- banner section -->
+        <section class="max-w-screen-sm md:max-w-6xl mx-auto my-8">
+            <div class="max-h-96 md:max-h-screen rounded-3xl w-full bg-slate-900 flex flex-col md:flex-row justify-center items-center gap-20 bg-hero-bg-img bg-center object-center bg-cover from-blue-800 to-blue-500 bg-blend-lighten py-80">
+                <div>
+                    <h1 class="text-white text-3xl md:text-6xl font-bold md:font-extrabold mb-8 space-y-10">Welcome to the <br><span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-900 to-slate-500">ReTro</span> Forum</h1>
+                    <p class="text-slate-300 text-lg mb-8">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                    <div class="relative inline-flex">
+                        <input type="text" class="bg-white text-slate-500 py-2 md:py-4 px-16 rounded-3xl place-content-start place-items-start placeholder:text-left" placeholder="Search Here Anything">
+                        <button class="absolute right-2 top-1 md:top-2 px-5 md:px-6 py-1 md:py-2 bg-blue-500 text-white rounded-full">Search</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl p-8">
+                    <div class="flex justify-between gap-12 mb-5">
+                        <p class="text-2xl font-semibold font-mulish">Registered Users</p>
+                        <p class="text-2xl font-semibold font-mulish">01</p>
+                    </div>
+                    <div class="flex justify-between gap-12 mb-5">
+                        <p class="text-2xl font-semibold font-mulish">Forum</p>
+                        <p class="text-2xl font-semibold font-mulish">05</p>
+                    </div>
+                    <div class="flex justify-between gap-12 mb-5">
+                        <p class="text-2xl font-semibold font-mulish">Topics</p>
+                        <p class="text-2xl font-semibold font-mulish">01</p>
+                    </div>
+                    <div class="flex justify-between gap-12">
+                        <p class="text-2xl font-semibold font-mulish">Replies</p>
+                        <p class="text-2xl font-semibold font-mulish">01</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 </html>

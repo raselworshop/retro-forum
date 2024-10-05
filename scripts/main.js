@@ -7,6 +7,7 @@ const loadAllPost =async(category)=>{
     // }else{
     //     console.log(`https://openapi.programming-hero.com/api/retro-forum/posts`)
     // }
+    document.getElementById('post-container').innerHTML = "";
     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts${category?`?category=${category}`:''}`)
     const data = await response.json()
     displayAllPost(data.posts)
@@ -20,7 +21,7 @@ const displayAllPost = (posts)=>{
         div.innerHTML = `
             <div class="bg-slate-200 p-8 rounded-3xl mb-5">
                <div class="h-24 rounded-3xl bg-slate-600 indicator">
-                    <span class="indicator-item badge${post.isActive? 'bg-green-500': 'bg-red-500'}"></span>
+                    <span class="indicator-item badge ${post.isActive? 'bg-green-500': 'bg-red-500'}"></span>
                     <div class="avatar">
                         <div class="w-24 rounded-xl">
                             <img src=${post.image} alt="">
@@ -106,7 +107,15 @@ const markAsRead = (description, view_count) =>{
             </div>
         </div>
     `
-    markAsReadContainer.appendChild(div)
+    markAsReadContainer.appendChild(div);
+    handleCount();
+}
+
+const handleCount = () => {
+    const preCount = document.getElementById('markAsReadCount').innerText;
+    const convertCount = parseInt(preCount);
+    const sum = convertCount + 1;
+    document.getElementById('markAsReadCount').innerText = sum;
 }
 
  const handleSearchByCategory = () => {

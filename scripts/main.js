@@ -72,7 +72,7 @@ const displayAllPost = (posts)=>{
                                     <p>${post.posted_time} <span>Min</span></p>
                                 </div>
                             </div>
-                            <div class="flex justify-end">
+                            <div class="flex justify-end tooltip tooltip-bottom" data-tip="Click to see right side content">
                                 <button id="add-to-list" onclick="markAsRead('${post.description}', ${post.view_count})" 
                                         class="bg-green-300 btn btn-circle text-white rounded-full" data-post='${JSON.stringify(post)}'>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
